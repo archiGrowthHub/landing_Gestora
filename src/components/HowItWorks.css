@@ -1,0 +1,353 @@
+/* How It Works Styles */
+.how-it-works {
+  position: relative;
+  overflow: hidden;
+}
+
+.how-it-works::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 0%, rgba(37, 99, 235, 0.02) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.how-it-works__header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.how-it-works__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.how-it-works__subtitle {
+  font-size: 1.125rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Steps Container */
+.how-it-works__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* Individual Step */
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.step:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+/* Step Visual */
+.step__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.step__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.step:hover .step__icon {
+  transform: scale(1.1);
+}
+
+.step__number {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-color);
+}
+
+/* Step Content */
+.step__content {
+  padding-left: 1rem;
+}
+
+.step__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.step__description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Step Connector */
+.step__connector {
+  position: absolute;
+  right: 2rem;
+  top: 100%;
+  width: calc(100% - 4rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Features */
+.how-it-works__features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.feature-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.feature-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-badge svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.how-it-works__cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.how-it-works__cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  animation: ctaShine 3s infinite;
+}
+
+@keyframes ctaShine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+.how-it-works__cta h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.how-it-works__cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.how-it-works__cta .btn {
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.how-it-works__cta .btn:hover {
+  background-color: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .how-it-works__title {
+    font-size: 2.25rem;
+  }
+  
+  .step {
+    padding: 2rem;
+  }
+  
+  .how-it-works__features {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works__header {
+    margin-bottom: 3rem;
+  }
+  
+  .how-it-works__title {
+    font-size: 2rem;
+  }
+  
+  .how-it-works__subtitle {
+    font-size: 1rem;
+  }
+  
+  .how-it-works__steps {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .step {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  
+  .step__content {
+    padding-left: 0;
+  }
+  
+  .step__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .step__description {
+    font-size: 0.9rem;
+  }
+  
+  .step__connector {
+    display: none;
+  }
+  
+  .how-it-works__features {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-badge {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  .how-it-works__cta {
+    padding: 2rem 1.5rem;
+  }
+  
+  .how-it-works__cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .how-it-works__cta p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works__header {
+    margin-bottom: 2rem;
+  }
+  
+  .how-it-works__title {
+    font-size: 1.75rem;
+  }
+  
+  .step {
+    padding: 1.5rem 1rem;
+  }
+  
+  .step__icon svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .step__title {
+    font-size: 1.125rem;
+  }
+  
+  .feature-badge {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .feature-badge svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .how-it-works__cta {
+    padding: 1.5rem 1rem;
+  }
+  
+  .how-it-works__cta h3 {
+    font-size: 1.25rem;
+  }
+}

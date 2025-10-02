@@ -116,7 +116,8 @@ const Header = ({ onOpenAppointment, onToggleDarken, isDarkenActive }) => {
 
           {/* Botones de acción */}
           <div className="nav__actions">
-            {/* Botón Darken Overlay */}
+            
+            {/* Botón Darken Overlay 
             <button
               type="button"
               className={`nav__darken-btn ${isDarkenActive ? 'nav__darken-btn--active' : ''}`}
@@ -132,6 +133,7 @@ const Header = ({ onOpenAppointment, onToggleDarken, isDarkenActive }) => {
                 />
               </svg>
             </button>
+            */}
 
             {/* Botón CTA */}
             <button

@@ -35,16 +35,16 @@ function App() {
     setFormData(null)
   }
 
-  const toggleDarkenOverlay = () => {
-    setIsDarkenOverlayActive(prev => !prev)
-  }
+  // const toggleDarkenOverlay = () => {
+  //   setIsDarkenOverlayActive(prev => !prev)
+  // }
 
   return (
     <div className="app">
       <Header 
         onOpenAppointment={openAppointmentModal}
-        onToggleDarken={toggleDarkenOverlay}
-        isDarkenActive={isDarkenOverlayActive}
+        // onToggleDarken={toggleDarkenOverlay}
+        // isDarkenActive={isDarkenOverlayActive}
       />
       <main>
         <Hero onOpenAppointment={openAppointmentModal} />

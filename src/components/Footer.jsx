@@ -1,4 +1,3 @@
-import React from 'react'
 import './Footer.css'
 
 const Footer = ({ onOpenAppointment }) => {
@@ -189,8 +188,8 @@ const Footer = ({ onOpenAppointment }) => {
                 <li><a href="#como-funciona">Cómo funciona</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#faq">Preguntas frecuentes</a></li>
-                <li><a href="#aviso-privacidad">Aviso de Privacidad</a></li>
-                <li><a href="#terminos">Términos y Condiciones</a></li>
+                {/* <li><a href="#aviso-privacidad">Aviso de Privacidad</a></li>
+                <li><a href="#terminos">Términos y Condiciones</a></li> */}
               </ul>
             </div>
 
@@ -237,13 +236,13 @@ const Footer = ({ onOpenAppointment }) => {
               © {currentYear} Turnos y Expediente. Todos los derechos reservados.
             </p>
             
-            <div className="footer__legal">
+            {/* <div className="footer__legal">
               <a href="#aviso-privacidad">Privacidad</a>
               <span className="footer__separator">•</span>
               <a href="#terminos">Términos</a>
               <span className="footer__separator">•</span>
               <a href="#cookies">Cookies</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
